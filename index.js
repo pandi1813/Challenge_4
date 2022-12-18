@@ -86,3 +86,62 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+
+//Total months included in the dataset
+
+let totalMonths = finances.length
+
+console.log("Total Months:", totalMonths)
+
+// counting the net total profit / losses
+    // to target finances[i][1]
+    // variable to store running total
+
+    // for loop to add up values
+
+let totalProfit = 0;
+
+for (let i = 0; i < finances.length; i++) {
+    totalProfit += finances[i][1];
+        
+     }
+        
+ console.log("Total net profit/loss: ", totalProfit)
+
+
+
+
+// let greatestProfit = 0;
+// let netProfit = 0;
+// let change = 0;
+
+// for (let i = 0; i < finances.length; i++) {
+//    for (let j = 0; j < finances[i].length; j++) {
+//     totalProfit += finances[i][j];
+//     change = finances[i][j] - netProfit;
+//     netProfit = finances[i][j];
+//     if (change > greatestProfit) {
+//         greatestProfit = [finances[i][1]]
+//     }
+    
+//    }
+// }
+//  console.log(greatestProfit)
+
+// let profitArray = []
+//  for (let i = 0; i < finances.length; i++) {
+//     profitArray.push(finances[i][1])
+    
+//  }
+//  console.log(profitArray)
+
+//  let diffArray = []
+// let profitChange = 0;
+//  for (let i = 1; i < profitArray.length; i++) {
+//      profitChange = profitArray[i] - profitArray[i-1]
+//     diffArray.push(profitChange)
+//      console.log(profitChange)
+//  }
+
+//  console.log(Math.max(diffArray)) 
