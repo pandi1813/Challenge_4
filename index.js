@@ -110,6 +110,28 @@ for (let i = 0; i < finances.length; i++) {
  console.log("Total net profit/loss: ", totalProfit)
 
 
+// Average change in profit/losses
+        // Create an array for the values
+        // Create an array to store the monthly changes
+        // Add up the changes and divide it with the total months
+
+let values = [];
+
+for (let i = 0; i < totalMonths; i++) {
+    values.push(finances[i][1]);
+    
+}
+
+ let valueChanges = [];
+
+ for (let i = 1; i < totalMonths; i++) {
+    let changePerMonth = values[i] - values[i-1];
+    valueChanges.push(changePerMonth)
+ }
+
+console.log(valueChanges);
+
+
 
 
 // let greatestProfit = 0;
@@ -129,19 +151,59 @@ for (let i = 0; i < finances.length; i++) {
 // }
 //  console.log(greatestProfit)
 
+
+// Average change
+
+
+// let diffArray = [];
+
+// for (let i = 1; i < finances.length; i++) {
+//     let changes = finances[i][1] - finances[i--][1];
+
+//     diffArray.push(changes);
+
+// }
+// console.log(diffArray);
+
+// Greatest Profit
+
 // let profitArray = []
-//  for (let i = 0; i < finances.length; i++) {
+
+// for (let i = 0; i < finances.length; i++) {
 //     profitArray.push(finances[i][1])
     
 //  }
 //  console.log(profitArray)
 
-//  let diffArray = []
-// let profitChange = 0;
+
+
+
+
+// create an array to store the value differences
 //  for (let i = 1; i < profitArray.length; i++) {
 //      profitChange = profitArray[i] - profitArray[i-1]
 //     diffArray.push(profitChange)
-//      console.log(profitChange)
+    //  console.log(profitChange)
+ 
+// console.log(diffArray)
+
+
+
+
+//  let totalChange = 0;
+//  for (let i = 0; i < diffArray.length; i++) {
+//     totalChange = diffArray[i] + diffArray[i+1]
+    
+//     console.log(totalChange)
 //  }
 
+// for (let i = diffArray.length - 1; i < diffArray.length; i++) {
+//     totalChange = diffArray[i] + diffArray[i-1]
+    
+// }
+
+// console.log(totalChange)
+
+
+// console.log("average change: ",-+ totalChange / totalMonths);
 //  console.log(Math.max(diffArray)) 
