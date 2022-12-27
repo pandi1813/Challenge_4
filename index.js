@@ -129,9 +129,13 @@ for (let i = 0; i < totalMonths; i++) {
     valueChanges.push(changePerMonth)
  }
 
-console.log(valueChanges);
 
-
+let changesSum = 0;
+for (let i = 0; i < valueChanges.length; i++) {
+    changesSum += valueChanges[i];
+    
+}
+console.log(changesSum / valueChanges.length)
 
 
 // let greatestProfit = 0;
