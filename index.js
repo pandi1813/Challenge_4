@@ -149,9 +149,9 @@ console.log("Greatest Profit:", greatestProfit)
 
 // Greatest loss
 
-// let greatestLoss = Math.min(...valueChanges);
+let greatestLoss = Math.min(...valueChanges);
 
-// console.log("Greatest Loss", greatestLoss)
+console.log("Greatest Loss", greatestLoss)
 
 // let greatestProfit = 0;
 // let netProfit = 0;
