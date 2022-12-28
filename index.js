@@ -138,6 +138,21 @@ for (let i = 0; i < valueChanges.length; i++) {
 console.log(changesSum / valueChanges.length)
 
 
+
+
+//Greatest profit
+
+let greatestProfit = Math.max(...valueChanges)
+console.log("Greatest Profit:", greatestProfit)
+
+
+
+// Greatest loss
+
+// let greatestLoss = Math.min(...valueChanges);
+
+// console.log("Greatest Loss", greatestLoss)
+
 // let greatestProfit = 0;
 // let netProfit = 0;
 // let change = 0;
