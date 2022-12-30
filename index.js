@@ -143,9 +143,10 @@ console.log(changesSum / valueChanges.length)
 //Greatest profit
 
 let greatestProfit = Math.max(...valueChanges)
-console.log("Greatest Profit:", greatestProfit)
+let greatestProfitIndex = valueChanges.indexOf(greatestProfit);
 
 
+console.log("Greatest Profit:",finances[greatestProfitIndex +1][0] ,greatestProfit)
 
 // Greatest loss
 
