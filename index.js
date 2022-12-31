@@ -88,6 +88,11 @@ var finances = [
 ];
 
 
+
+console.log("Financial Analysis")
+console.log("-------------------------------")
+
+
 //Total months included in the dataset
 
 let totalMonths = finances.length
@@ -107,7 +112,7 @@ for (let i = 0; i < finances.length; i++) {
         
      }
         
- console.log("Total net profit/loss: ", totalProfit)
+ console.log("Total:", totalProfit)
 
 
 // Average change in profit/losses
@@ -135,7 +140,7 @@ for (let i = 0; i < valueChanges.length; i++) {
     changesSum += valueChanges[i];
     
 }
-console.log(changesSum / valueChanges.length)
+console.log("Average change:",changesSum / valueChanges.length)
 
 
 
@@ -146,13 +151,14 @@ let greatestProfit = Math.max(...valueChanges)
 let greatestProfitIndex = valueChanges.indexOf(greatestProfit);
 
 
-console.log("Greatest Profit:",finances[greatestProfitIndex +1][0] ,greatestProfit)
+console.log("Greatest Increase in Profits:",finances[greatestProfitIndex + 1][0] ,greatestProfit)
 
 // Greatest loss
 
 let greatestLoss = Math.min(...valueChanges);
+let greatestLossIndex = valueChanges.indexOf(greatestLoss);
 
-console.log("Greatest Loss", greatestLoss)
+console.log("Greatest Decrease in Profits: ", finances[greatestLossIndex + 1][0], greatestLoss)
 
 // let greatestProfit = 0;
 // let netProfit = 0;
