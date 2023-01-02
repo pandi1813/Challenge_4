@@ -89,15 +89,15 @@ var finances = [
 
 
 
-console.log("Financial Analysis")
-console.log("-------------------------------")
+console.log("Financial Analysis");
+console.log("-------------------------------");
 
 
 // Total months included in the dataset ------------------------------------------------
 
-let totalMonths = finances.length
+let totalMonths = finances.length;
 
-console.log("Total Months:", totalMonths)
+console.log("Total Months:", totalMonths);
 
 
 
@@ -109,7 +109,7 @@ let totalProfit = 0;
 for (let i = 0; i < finances.length; i++) {
     totalProfit += finances[i][1]; //Targets only the profit/loss values
         
-     }
+     };
         
  console.log("Total:", "$" + totalProfit);
 
@@ -125,21 +125,24 @@ let values = [];  // array to store only the income values
 for (let i = 0; i < totalMonths; i++) {
     values.push(finances[i][1]);
     
-}
+};
 
  let valueChanges = []; // array to store monthly value changes 
 
  for (let i = 1; i < totalMonths; i++) {
     let changePerMonth = values[i] - values[i-1];
+
     valueChanges.push(changePerMonth)
- }
+ };
 
 
 let changesSum = 0;  // calculating the sum of changes and then dividing with the total months number (ignoring the first month)
 for (let i = 0; i < valueChanges.length; i++) {
     changesSum += valueChanges[i];
     
-}
+};
+
+
 let averageChange = changesSum / valueChanges.length;
 let averageChangeTwoDecimals = averageChange.toFixed(2);
 
