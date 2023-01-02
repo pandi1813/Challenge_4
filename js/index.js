@@ -93,15 +93,17 @@ console.log("Financial Analysis")
 console.log("-------------------------------")
 
 
-// Total months included in the dataset
+// Total months included in the dataset ------------------------------------------------
 
 let totalMonths = finances.length
 
 console.log("Total Months:", totalMonths)
 
-// Net total profit / losses
-   
- 
+
+
+
+// Net total profit / losses------------------------------------------------------------
+    
 let totalProfit = 0;
 
 for (let i = 0; i < finances.length; i++) {
@@ -112,7 +114,10 @@ for (let i = 0; i < finances.length; i++) {
  console.log("Total:", totalProfit)
 
 
-// Average change in profit/losses
+
+
+
+// Average change in profit/losses -----------------------------------------------------
         
 
 let values = [];  // array to store only the income values
@@ -139,23 +144,25 @@ let averageChange = changesSum / valueChanges.length;
 let averageChangeTwoDecimals = averageChange.toFixed(2);
 
 
-console.log("Average change:", averageChangeTwoDecimals)
+console.log("Average change:", averageChangeTwoDecimals);
 
 
 
 
-//Greatest profit
+//Greatest profit ----------------------------------------------------------------------
 
-let greatestProfit = Math.max(...valueChanges) //find the largest number in the monthly changes array
+let greatestProfit = Math.max(...valueChanges); //find the largest number in the monthly changes array
 let greatestProfitIndex = valueChanges.indexOf(greatestProfit); // the index of the largest number --> match it up with the month number in the original array 
 
 
-console.log("Greatest Increase in Profits:",finances[greatestProfitIndex + 1][0] ,greatestProfit) // +1 to the index because the first month is ignored when calculated the changes
+console.log("Greatest Increase in Profits:",finances[greatestProfitIndex + 1][0] ,greatestProfit); // +1 to the index because the first month is ignored when calculated the changes
 
-// Greatest loss
+
+
+// Greatest loss -----------------------------------------------------------------------
         // see Greatest Profit notes
 
 let greatestLoss = Math.min(...valueChanges);
 let greatestLossIndex = valueChanges.indexOf(greatestLoss);
 
-console.log("Greatest Decrease in Profits: ", finances[greatestLossIndex + 1][0], greatestLoss)
+console.log("Greatest Decrease in Profits: ", finances[greatestLossIndex + 1][0], greatestLoss);
