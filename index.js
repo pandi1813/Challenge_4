@@ -135,7 +135,11 @@ for (let i = 0; i < valueChanges.length; i++) {
     changesSum += valueChanges[i];
     
 }
-console.log("Average change:",changesSum / valueChanges.length)
+let averageChange = changesSum / valueChanges.length;
+let averageChangeTwoDecimals = averageChange.toFixed(2);
+
+
+console.log("Average change:", averageChangeTwoDecimals)
 
 
 
