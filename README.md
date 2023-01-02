@@ -1,3 +1,5 @@
+# Financial analysis with JavaScript
+
 ## Table of contents
 
 - [Overview](#overview)

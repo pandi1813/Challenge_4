@@ -111,7 +111,7 @@ for (let i = 0; i < finances.length; i++) {
         
      }
         
- console.log("Total:", totalProfit)
+ console.log("Total:", "$" + totalProfit);
 
 
 
@@ -144,7 +144,7 @@ let averageChange = changesSum / valueChanges.length;
 let averageChangeTwoDecimals = averageChange.toFixed(2);
 
 
-console.log("Average change:", averageChangeTwoDecimals);
+console.log("Average change:", "$" + averageChangeTwoDecimals);
 
 
 
@@ -155,7 +155,7 @@ let greatestProfit = Math.max(...valueChanges); //find the largest number in the
 let greatestProfitIndex = valueChanges.indexOf(greatestProfit); // the index of the largest number --> match it up with the month number in the original array 
 
 
-console.log("Greatest Increase in Profits:",finances[greatestProfitIndex + 1][0] ,greatestProfit); // +1 to the index because the first month is ignored when calculated the changes
+console.log("Greatest Increase in Profits:",finances[greatestProfitIndex + 1][0]+ ": $" + greatestProfit); // +1 to the index because the first month is ignored when calculated the changes
 
 
 
@@ -165,4 +165,4 @@ console.log("Greatest Increase in Profits:",finances[greatestProfitIndex + 1][0]
 let greatestLoss = Math.min(...valueChanges);
 let greatestLossIndex = valueChanges.indexOf(greatestLoss);
 
-console.log("Greatest Decrease in Profits: ", finances[greatestLossIndex + 1][0], greatestLoss);
+console.log("Greatest Decrease in Profits: ", finances[greatestLossIndex + 1][0]+ ": $" + greatestLoss);
